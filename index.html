@@ -1,4 +1,147 @@
----
-layout: home
-# Index page
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amritha Lal</title>
+<meta name="description" content="Amritha Lal Kalathummarath: security engineer working on identity and containment for AI agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <p class="prompt"><b>amritha@identity</b>:~$ <span class="cmd">whoami</span></p>
+    <h1>Amritha Lal Kalathummarath<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="focus">Identity and containment for AI agents</p>
+    <p class="where">Staff-level security engineer at AWS · San Jose, CA</p>
+  </header>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h"><b>$</b> cat about.txt</h2>
+    <p>I've worked in security for 12 years, most of it at Amazon and AWS, with a stint leading product security at SunPower. My focus now is identity for AI agents and other non-human workloads: who an agent is, what it is allowed to touch, how that access narrows as work passes from one agent or company to the next, and how to shut it off when an agent goes wrong.</p>
+    <p>I also build agents that do security work, like reading service code and writing threat models that a reviewer can check line by line.</p>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h"><b>$</b> ls projects/</h2>
+    <ul class="items">
+      <li>
+        <span class="name">Threat modeling as code<span class="tag">AWS internal</span></span>
+        <span class="what">A multi-agent system that reads database service code, maps call paths, identities and data flows, and writes STRIDE threat models with every finding checked against the source. Used across AWS database teams, it cut reviews of older services from months to days. I'm now leading the design of the production version.</span>
+        <span class="meta">No public link</span>
+      </li>
+      <li>
+        <span class="name">LeadFlowAI<span class="tag">Capstone winner</span></span>
+        <span class="what">A multi-agent system for inbound B2B sales leads. Agents gather live buyer signals, read the notes on the form and check each rep's real workload, then route the lead with a short buyer brief in seconds instead of minutes. Built with a six-person team in the Building Agentic AI Applications course, where I worked on the demo build. Named Capstone Presentation Winner for the October 2026 cohort.</span>
+        <span class="meta">Team project · no public link</span>
+      </li>
+      <li>
+        <span class="name">semantic-sidecar</span>
+        <span class="what">A sidecar that detects and blocks MCP supply-chain attacks on developer machines, such as typosquatted MCP packages that wait before activating and payloads hidden in invisible Unicode.</span>
+        <span class="meta"><span>Python</span><a href="https://github.com/AKRita23/semantic-sidecar">github.com/AKRita23/semantic-sidecar</a></span>
+      </li>
+      <li>
+        <span class="name">Cross-domain agent identity</span>
+        <span class="what">An agent working for one company calls tools in other systems (Salesforce, Google Calendar and Slack over MCP), with task-based access checks at each step. Built twice: once on the AGNTCY Identity Service, once on Cedar with Amazon Verified Permissions.</span>
+        <span class="meta"><span>Python</span><a href="https://github.com/AKRita23/xdomain-openclaw-agntcy-poc">AGNTCY version</a><a href="https://github.com/AKRita23/xdomain-openclaw-cedar-poc">Cedar version</a></span>
+      </li>
+      <li>
+        <span class="name">agntcyXAA multi-enterprise</span>
+        <span class="what">A proposed workflow for agents from several companies fixing a vulnerability together. Access is passed with OAuth token exchange (RFC 8693), so scopes can only shrink at each hop.</span>
+        <span class="meta"><a href="https://github.com/AKRita23/agntcyXAA-MultiEnterprise">github.com/AKRita23/agntcyXAA-MultiEnterprise</a></span>
+      </li>
+      <li>
+        <span class="name">MCP threat detection</span>
+        <span class="what">A proof of concept that spots threats live in an agent workflow that runs on MCP.</span>
+        <span class="meta"><span>Python</span><a href="https://github.com/AKRita23/agent_mcp_orch_poc">github.com/AKRita23/agent_mcp_orch_poc</a></span>
+      </li>
+      <li>
+        <span class="name">Runtime identity monitoring</span>
+        <span class="what">Monitoring for enterprise agents that flags permission drift and overly broad access as it happens, with a kill switch that pulls access from rogue or orphaned agents.</span>
+        <span class="meta">Not public</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="standards" aria-labelledby="standards-h">
+    <h2 id="standards-h"><b>$</b> ls standards/</h2>
+    <ul class="items">
+      <li>
+        <span class="name">IETF draft: Cross-Domain AuthZ Information Sharing for Agents</span>
+        <span class="what">Co-author, with engineers from Cisco, Skyfire and Ory. It describes how agents delegate across several hops and organizations, so scopes only narrow, the user's intent carries through, and each step leaves a signed record.</span>
+        <span class="meta"><span>draft-diaconu-agents-authz-info-sharing</span><a href="https://datatracker.ietf.org/doc/draft-diaconu-agents-authz-info-sharing/">datatracker.ietf.org</a></span>
+      </li>
+      <li>
+        <span class="name">OWASP Top 10 for Agentic Applications 2026</span>
+        <span class="what">Named contributor. Wrote mitigations for ASI03 (Identity and Privilege Abuse) and ASI10 (Rogue Agents).</span>
+        <span class="meta"><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">genai.owasp.org</a></span>
+      </li>
+      <li>
+        <span class="name">AGNTCY Identity Working Group</span>
+        <span class="what">Contributor to the identity work in AGNTCY, a Linux Foundation project for identities of agents, MCP servers and multi-agent systems.</span>
+        <span class="meta"><a href="https://github.com/agntcy/identity">github.com/agntcy/identity</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="writing" aria-labelledby="writing-h">
+    <h2 id="writing-h"><b>$</b> ls writing/</h2>
+    <ul class="items">
+      <li>
+        <span class="name">A Hitchhiker's Guide to Agentic Identity</span>
+        <span class="what">A series on how agent identity works in practice. Entry 01 takes apart Anthropic's Enterprise-Managed Authorization and the ID-JAG flow.</span>
+        <span class="meta"><a href="https://www.linkedin.com/in/amrithalalk">LinkedIn</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-h">
+    <h2 id="experience-h"><b>$</b> cat experience.log</h2>
+    <dl class="jobs">
+      <div class="job">
+        <dt>2023 – now</dt>
+        <dd><span class="role">Product Security Engineer, Staff level</span> · <span class="org">AWS Database Services</span>
+          <span class="note">Identity lead for bringing DynamoDB and Aurora to the Vercel Marketplace as memory for AI agents, using short-lived cross-account access that ends at customer handoff. Leads threat-model reviews across database services and designed credential isolation for multi-tenant databases.</span></dd>
+      </div>
+      <div class="job">
+        <dt>2023</dt>
+        <dd><span class="role">Principal Security Engineer</span> · <span class="org">SunPower</span>
+          <span class="note">Owned product security strategy, reporting to the CISO, including software on devices connected to home solar and the power grid.</span></dd>
+      </div>
+      <div class="job">
+        <dt>2022 – 2023</dt>
+        <dd><span class="role">Staff Identity Security Engineer</span> · <span class="org">AWS</span>
+          <span class="note">Built a continuous policy-as-code audit across IAM, STS, Cognito and Organizations.</span></dd>
+      </div>
+      <div class="job">
+        <dt>2019 – 2021</dt>
+        <dd><span class="role">Senior Product Security Engineer</span> · <span class="org">AWS</span>
+          <span class="note">Security owner for database storage and processing services; designed OS-level sandboxing with the database, EC2 and kernel teams.</span></dd>
+      </div>
+      <div class="job">
+        <dt>2014 – 2019</dt>
+        <dd><span class="role">Application Security Engineer</span> · <span class="org">Amazon and Quidsi</span>
+          <span class="note">Secured backend services for Amazon's global payments. Founding security engineer at Quidsi, where I led the move to AWS.</span></dd>
+      </div>
+    </dl>
+    <p class="creds">M.S. Information Security, Johns Hopkins · Executive Leadership Program, Stanford GSB · GIAC GXPN, GWAPT</p>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h"><b>$</b> cat contact.txt</h2>
+    <ul class="contact">
+      <li><span class="k">email</span><span class="v"><a href="mailto:amrithalalk@gmail.com">amrithalalk@gmail.com</a></span></li>
+      <li><span class="k">linkedin</span><span class="v"><a href="https://www.linkedin.com/in/amrithalalk">linkedin.com/in/amrithalalk</a></span></li>
+      <li><span class="k">github</span><span class="v"><a href="https://github.com/AKRita23">github.com/AKRita23</a></span></li>
+    </ul>
+  </section>
+
+  <footer>Built as plain HTML and CSS. No trackers.</footer>
+
+</main>
+</body>
+</html>
